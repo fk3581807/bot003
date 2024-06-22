@@ -1,0 +1,5 @@
+{
+  "builds": {
+    "commands": ["npm install", "node bot.js"]
+  }
+}
