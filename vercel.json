@@ -1,25 +1,16 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "bot.py",
-      "use": "package.json",
-      "config": {
-        "browserslist": "defaults"
-      }
-    }
-  ],
+  "build": {
+    "command": "npm run build"
+  },
   "routes": [
     {
-      "src": "/",
-      "dest": "bot.py"
-    },
-    {
-      "src": "/webhook",
-      "dest": "webhook.py"
+      "src": "boy.py",
+      "dest": "/"
     }
   ],
   "env": {
-    "NODE_ENV": "production"
+    "NODE_ENV": "production",
+    "TELEGRAM_BOT_TOKEN": "${ TELEGRAM_BOT_TOKEN }",
+    "CLICKFLY_API_KEY": "${ CLICKFLY_API_KEY }"
   }
 }
